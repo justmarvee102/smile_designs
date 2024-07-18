@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Navbar } from './components';
+import ImageSliders from './components/ImageSliders';
+import { images } from './constants';
+import './App.scss';
 
-function App() {
+const slide = [
+  images.scrunchy,
+  images.scrunchie,
+  images.scrunchies,
+  images.fashion,
+  images.smile,
+  images.fash,
+  images.smillie,
+  images.smil,
+  images.slime,
+  images.shien,
+  images.fas,
+  images.lie,
+  images.comply,
+  images.style,
+];
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Navbar />
+      <ImageSliders autoSlide autoSlideInterval={5000}>
+        {slide.map((image, index) => (
+          <img
+            key={index}
+            src={image}
+            alt={`Slide ${index + 1}`}
+            className="w-full"
+          />
+        ))}
+      </ImageSliders>
     </div>
   );
 }
-
-export default App;
