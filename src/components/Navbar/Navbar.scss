@@ -6,8 +6,8 @@
   align-items: center;
 
   padding: 1rem 2rem;
-  background: rgba(243, 238, 248, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(236, 236, 236, 0.37);
+  background: rgba(209, 209, 209, 0.152);
+  box-shadow: 0 8px 30px 0 rgba(218, 218, 218, 0.244);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(149, 208, 221, 0.18);
@@ -16,6 +16,8 @@
 }
 
 .app__navbar-logo {
+  // Styles for light mode logo
+  filter: brightness(2);
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -29,6 +31,7 @@
       height: 30px;
     }
   }
+  // Add any other styling specific to the light mode logo here
 }
 
 .app__navbar-links {
@@ -48,6 +51,7 @@
     div {
       width: 5px;
       height: 5px;
+
       background: transparent;
       border-radius: 50%;
 
@@ -86,6 +90,7 @@
   height: 35px;
   border-radius: 50%;
   position: relative;
+  cursor: pointer;
 
   display: flex;
   justify-content: center;
@@ -115,13 +120,12 @@
     align-items: flex-end;
     flex-direction: column;
 
-    background: white;
     background-color: var(--white-color);
     background-size: cover;
     background-repeat: repeat;
 
     /* top box shadow */
-    box-shadow: 0px 0px 20px rgba(168, 168, 168, 0.15);
+    box-shadow: 0px 0px 20px rgb(251, 251, 251);
 
     svg {
       width: 35px;

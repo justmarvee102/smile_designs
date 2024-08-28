@@ -54,7 +54,7 @@ function ImageSliders({
       title: 'Inspiration',
       title2: 'Where Did The Idea Come From 🤫 ',
       description: [
-        'Online resources and also from my client who stated blatantly that she loved pink. I love pink also so I related and put in my love for pink into the design.',
+        'Online resources and also resources from my client who stated blatantly that she loved pink.',
       ],
     },
     {
@@ -101,16 +101,16 @@ function ImageSliders({
       title: 'Result',
       title2: 'The Smile Effect',
       description: [
-        'The end result? Well the end result was pretty cool. I was pretty surprised myself because this was the first graphic project I ever worked on for a client, I was very impressed. Working with Scrunchies By Smile was a joyous experience, and I’m thrilled with how the graphics turned out. It was a wonderful journey into a world of stitches and smiles, creating visuals that tell the story of a brand that sews love into every piece. The graphic materials are sure to make anyone smile 😍 ',
+        'The end result? Well the end result was pretty cool. I was pretty surprised myself because this was the first graphic project I ever worked on for a client. Working with Scrunchies By Smile was a joyous experience, and I’m thrilled with how the graphics turned out. It was a wonderful journey into a world of stitches and smiles, creating visuals that tell the story of a brand that sews love into every piece. The graphic materials are sure to make anyone smile 😍 ',
       ],
     },
   ];
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center p-4 sm:p-12 lg:p-10  min-h-screen">
-        <div className="flex flex-col lg:flex-row items-center justify-center max-w-4xl w-full rounded overflow-hidden shadow-lg bg-white sm:mt-10 lg:mt-10">
-          <div className="relative w-full lg:w-3/6 overflow-hidden ">
+      <div className="flex flex-col items-center justify-center p-4 sm:p-14 lg:p-14  min-h-screen">
+        <div className="flex flex-col lg:flex-row items-center justify-center max-w-5xl w-full rounded overflow-hidden shadow-lg bg-white dark:bg-gray-800 sm:mt-8 lg:mt-10 mt-20">
+          <div className="relative w-full lg:w-3/6 overflow-hidden">
             <motion.div
               className=" flex transition-transform ease-out duration-500 h-full"
               style={{ transform: `translateX(-${curr * 100}%)` }}
@@ -128,13 +128,13 @@ function ImageSliders({
             <div className="absolute inset-0 flex items-center justify-between p-4">
               <button
                 onClick={prev}
-                className="p-2 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
+                className="p-2 rounded-full shadow  bg-white/80 dark:bg-gray-800 text-gray-800 dark:text-white hover:bg-white hover:dark:bg-gray-600"
               >
                 <ChevronLeft size={22} />
               </button>
               <button
                 onClick={next}
-                className="p-2 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
+                className="p-2 rounded-full shadow  bg-white/80 dark:bg-gray-800 text-gray-800 dark:text-white hover:bg-white hover:dark:bg-gray-600"
               >
                 <ChevronRight size={22} />
               </button>
@@ -145,7 +145,9 @@ function ImageSliders({
                   <div
                     key={i}
                     className={`transition-all w-2 h-2 rounded-full ${
-                      curr === i ? 'bg-black p-1' : 'bg-black bg-opacity-30'
+                      curr === i
+                        ? 'bg-black p-1 dark:bg-black'
+                        : 'bg-black dark:bg-black bg-opacity-30 dark:bg-opacity-30'
                     }`}
                   />
                 ))}
@@ -153,7 +155,7 @@ function ImageSliders({
             </div>
           </div>
           <div className="lg:w-3/6 p-6 sm:w-2/2">
-            <div className="bold-text mb-3">
+            <div className="bold-text mb-3 dark:text-gray-200">
               Crafting the Brand Identity for Scrunchies By Smile 🌟.
             </div>
             <p className="s-text mb-4">
@@ -165,10 +167,14 @@ function ImageSliders({
               🎨✂️
             </p>
             <div className="flex flex-col mb-3">
-              <span className="font-semibold">Organization Name:</span>
+              <span className="font-semibold dark:text-gray-200">
+                Organization Name:
+              </span>
               <span className="s-text">Scrunchies By Smile</span>
             </div>
-            <div className="font-semibold mb-1">Tools Used:</div>
+            <div className="font-semibold mb-1 dark:text-gray-200">
+              Tools Used:
+            </div>
             <div className="flex flex-row gap-4 mb-4">
               <div className="flex flex-col items-center">
                 <img src={images.canva} alt="Canva" className="w-7 h-7 mt-1" />
@@ -184,7 +190,9 @@ function ImageSliders({
               </div>
             </div>
             <div className="flex-col flex mb-4">
-              <div className="font-semibold">Color Palette 🌈:</div>
+              <div className="font-semibold dark:text-gray-200">
+                Color Palette 🌈:
+              </div>
               <h2 className="s-text mb-2">
                 Think sunny yellows, cheerful pinks, and fresh greens colors.
               </h2>
@@ -196,12 +204,12 @@ function ImageSliders({
                   className="w-8 b1 h-8 mt-1 ml-1 rounded-full"
                 />
                 <div className="colors">
-                  <button className=" w-8 h-8 rounded-full shadow hover:bg-white mt-1 ml-2 b1"></button>
-                  <button className=" w-8 h-8 rounded-full shadow hover:bg-white mt-1 ml-2 b2"></button>
-                  <button className=" w-8 h-8 rounded-full shadow b3 hover:bg-white mt-1 ml-3"></button>
-                  <button className=" w-8 h-8 rounded-full shadow b4 hover:bg-white mt-1 ml-2"></button>
-                  <button className=" w-8 h-8 rounded-full shadow b5 hover:bg-white mt-1 ml-2"></button>
-                  <button className=" w-8 h-8 rounded-full shadow b6 hover:bg-white mt-1 ml-2"></button>
+                  <button className=" w-8 h-8 rounded-full shadow hover:bg-white mt-1 ml-2 b1 dark:hover:bg-gray-800"></button>
+                  <button className=" w-8 h-8 rounded-full shadow hover:bg-white mt-1 ml-2 b2 dark:hover:bg-gray-800"></button>
+                  <button className=" w-8 h-8 rounded-full shadow b3 hover:bg-white mt-1 ml-3 dark:hover:bg-gray-800"></button>
+                  <button className=" w-8 h-8 rounded-full shadow b4 hover:bg-white mt-1 ml-2 dark:hover:bg-gray-800"></button>
+                  <button className=" w-8 h-8 rounded-full shadow b5 hover:bg-white mt-1 ml-2 dark:hover:bg-gray-800"></button>
+                  <button className=" w-8 h-8 rounded-full shadow b6 hover:bg-white mt-1 ml-2 dark:hover:bg-gray-800"></button>
                 </div>
               </div>
 
@@ -212,12 +220,12 @@ function ImageSliders({
                   className="w-8 b1 h-8 mt-1 ml-1 rounded-full"
                 />
                 <div className="colors2">
-                  <button className=" w-8 h-8 rounded-full shadow hover:bg-white mt-1 ml-2 b1"></button>
-                  <button className=" w-8 h-8 rounded-full shadow hover:bg-white mt-1 ml-2 b2"></button>
-                  <button className=" w-8 h-8 rounded-full shadow b3 hover:bg-white mt-1 ml-3"></button>
-                  <button className=" w-8 h-8 rounded-full shadow b4 hover:bg-white mt-1 ml-2"></button>
-                  <button className=" w-8 h-8 rounded-full shadow b5 hover:bg-white mt-1 ml-2"></button>
-                  <button className=" w-8 h-8 rounded-full shadow b6 hover:bg-white mt-1 ml-2"></button>
+                  <button className=" w-8 h-8 rounded-full shadow hover:bg-white mt-1 ml-2 b1 dark:hover:bg-gray-800"></button>
+                  <button className=" w-8 h-8 rounded-full shadow hover:bg-white mt-1 ml-2 b2 dark:hover:bg-gray-800"></button>
+                  <button className=" w-8 h-8 rounded-full shadow b3 hover:bg-white mt-1 ml-3 dark:hover:bg-gray-800"></button>
+                  <button className=" w-8 h-8 rounded-full shadow b4 hover:bg-white mt-1 ml-2 dark:hover:bg-gray-800"></button>
+                  <button className=" w-8 h-8 rounded-full shadow b5 hover:bg-white mt-1 ml-2 dark:hover:bg-gray-800"></button>
+                  <button className=" w-8 h-8 rounded-full shadow b6 hover:bg-white mt-1 ml-2 dark:hover:bg-gray-800"></button>
                 </div>
               </div>
 
@@ -229,19 +237,24 @@ function ImageSliders({
                 />
 
                 <div className="colors3">
-                  <button className=" w-8 h-8 rounded-full shadow hover:bg-white mt-1 ml-2 b1"></button>
-                  <button className=" w-8 h-8 rounded-full shadow hover:bg-white mt-1 ml-2 b2"></button>
-                  <button className=" w-8 h-8 rounded-full shadow b3 hover:bg-white mt-1 ml-3"></button>
-                  <button className=" w-8 h-8 rounded-full shadow b4 hover:bg-white mt-1 ml-2"></button>
-                  <button className=" w-8 h-8 rounded-full shadow b5 hover:bg-white mt-1 ml-2"></button>
-                  <button className=" w-8 h-8 rounded-full shadow b6 hover:bg-white mt-1 ml-2"></button>
+                  <button className=" w-8 h-8 rounded-full shadow hover:bg-white mt-1 ml-2 b1 dark:hover:bg-gray-800"></button>
+                  <button className=" w-8 h-8 rounded-full shadow hover:bg-white mt-1 ml-2 b2 dark:hover:bg-gray-800"></button>
+                  <button className=" w-8 h-8 rounded-full shadow b3 hover:bg-white mt-1 ml-3 dark:hover:bg-gray-800"></button>
+                  <button className=" w-8 h-8 rounded-full shadow b4 hover:bg-white mt-1 ml-2 dark:hover:bg-gray-800"></button>
+                  <button className=" w-8 h-8 rounded-full shadow b5 hover:bg-white mt-1 ml-2 dark:hover:bg-gray-800"></button>
+                  <button className=" w-8 h-8 rounded-full shadow b6 hover:bg-white mt-1 ml-2 dark:hover:bg-gray-800"></button>
                 </div>
               </div>
             </div>
 
             <div className="flex flex-col mb-4">
-              <div className="font-semibold mb-2">Project Link:</div>
-              <a href="blank" className="text-blue-500 underline">
+              <div className="font-semibold mb-2 dark:text-gray-200">
+                Project Link:
+              </div>
+              <a
+                href="blank"
+                className="text-blue-500 dark:text-blue-300 dark:hover:text-blue-100 underline"
+              >
                 *Check out a full PDF of the designs*
               </a>
             </div>
@@ -249,12 +262,14 @@ function ImageSliders({
         </div>
       </div>
 
-      <h1 className="font-semibold text-center ">Other Important Info:</h1>
+      <h1 className="font-semibold text-center dark:text-gray-200">
+        Other Important Info:
+      </h1>
       <div className="flex flex-wrap justify-center gap-5 w-full p-6 sm:p-10 lg:p-6">
         {items.map((item, index) => (
           <motion.div
             key={index}
-            className="flex flex-col overflow-hidden shadow-lg bg-white w-full sm:w-5/12 lg:w-1/4 items-center p-6 hover-text"
+            className="flex flex-col overflow-hidden shadow-lg bg-gray-300 dark:bg-gray-800 w-full sm:w-5/12 lg:w-1/4 items-center p-6 hover-text"
             variants={containerVariants}
             whileDrag={{ scale: 1.05 }}
             whileHover={{
@@ -262,22 +277,25 @@ function ImageSliders({
               boxShadow: '0 10px 20px rgba(0, 0, 0, 0.15)',
               rotate: 10,
               scale: 1.05,
-              backgroundColor: 'lightpink',
             }}
             whileTap={{
               scaleX: -1,
               rotate: 10,
               y: -10,
               boxShadow: '0 10px 20px rgba(0, 0, 0, 0.15)',
-              backgroundColor: 'palevioletred',
             }}
             animate="visible"
             style={{ cursor: 'pointer' }}
             initial="hidden"
           >
-            <div className="font-semibold mb-2 text-center">{item.title}</div>
+            <div className="font-semibold mb-2 text-center text-black dark:text-white">
+              {item.title}
+            </div>
             {item.description.map((desc, i) => (
-              <h2 key={i} className="h-text text-center">
+              <h2
+                key={i}
+                className="h-text text-center text-black dark:text-white"
+              >
                 {desc}
               </h2>
             ))}
@@ -285,11 +303,11 @@ function ImageSliders({
         ))}
       </div>
 
-      <div className="flex flex-wrap justify-center gap-7 w-full px-6 sm:px-10 lg:px-14 py-4 sm:py-8 lg:py-10">
+      <div className="flex flex-wrap justify-center gap-5 w-full p-6 sm:p-10 lg:p-6">
         {items2.map((item2, index) => (
           <motion.div
             key={index}
-            className="flex flex-col overflow-hidden shadow-lg bg-white w-full sm:w-5/12 lg:w-1/4 items-center p-6 hover-text"
+            className="flex flex-col overflow-hidden shadow-lg bg-gray-300 dark:bg-gray-800 w-full sm:w-5/12 lg:w-1/4 items-center p-6 hover-text"
             variants={containerVariants}
             whileDrag={{ scale: 1.05 }}
             whileHover={{
@@ -297,23 +315,25 @@ function ImageSliders({
               boxShadow: '0 10px 20px rgba(0, 0, 0, 0.15)',
               rotate: 10,
               scale: 1.05,
-              backgroundColor: 'paleturquoise',
             }}
             whileTap={{
               scaleX: -1,
-              scale: 1.05,
-              rotate: 20,
+              rotate: 10,
               y: -10,
               boxShadow: '0 10px 20px rgba(0, 0, 0, 0.15)',
-              backgroundColor: 'darkturquoise',
             }}
             animate="visible"
             style={{ cursor: 'pointer' }}
             initial="hidden"
           >
-            <div className="font-semibold mb-2 text-center">{item2.title}</div>
+            <div className="font-semibold mb-2 text-center text-black dark:text-white">
+              {item2.title}
+            </div>
             {item2.description.map((desc, i) => (
-              <h2 key={i} className="h-text text-center">
+              <h2
+                key={i}
+                className="h-text text-center text-black dark:text-white"
+              >
                 {desc}
               </h2>
             ))}
@@ -321,11 +341,11 @@ function ImageSliders({
         ))}
       </div>
 
-      <div className="flex flex-wrap justify-center gap-7 w-full px-6 sm:px-10 lg:px-14 py-4 sm:py-8 lg:py-10">
+      <div className="flex flex-wrap justify-center gap-5 w-full p-6 sm:p-10 lg:p-6">
         {items3.map((item3, index) => (
           <motion.div
             key={index}
-            className="flex flex-col overflow-hidden shadow-lg bg-white w-full sm:w-5/12 lg:w-1/4 items-center p-6 hover-text "
+            className="flex flex-col overflow-hidden shadow-lg bg-gray-300 dark:bg-gray-800 w-full sm:w-5/12 lg:w-1/4 items-center p-6 hover-text"
             variants={containerVariants}
             whileDrag={{ scale: 1.05 }}
             whileHover={{
@@ -333,25 +353,25 @@ function ImageSliders({
               boxShadow: '0 10px 20px rgba(0, 0, 0, 0.15)',
               rotate: 10,
               scale: 1.05,
-              backgroundColor: 'peachpuff',
             }}
             whileTap={{
               scaleX: -1,
               rotate: 10,
               y: -10,
               boxShadow: '0 10px 20px rgba(0, 0, 0, 0.15)',
-              backgroundColor: 'darkorange',
             }}
             animate="visible"
             style={{ cursor: 'pointer' }}
             initial="hidden"
           >
-            <div className="font-semibold mb-1 text-center">{item3.title}</div>
-            <div className="font-semibold mb-2 text-center text-gray-500">
-              {item3.title2}
+            <div className="font-semibold mb-2 text-center text-black dark:text-white">
+              {item3.title}
             </div>
             {item3.description.map((desc, i) => (
-              <h2 key={i} className="h-text text-center">
+              <h2
+                key={i}
+                className="h-text text-center text-black dark:text-white"
+              >
                 {desc}
               </h2>
             ))}
@@ -359,11 +379,11 @@ function ImageSliders({
         ))}
       </div>
 
-      <div className="flex flex-wrap justify-center gap-7 w-full px-6 sm:px-10 lg:px-14 py-4 sm:py-8 lg:py-10">
+      <div className="flex flex-wrap justify-center gap-5 w-full p-6 sm:p-10 lg:p-6">
         {items4.map((item4, index) => (
           <motion.div
             key={index}
-            className="flex flex-col overflow-hidden shadow-lg bg-white w-full sm:w-5/12 lg:w-1/4 items-center p-6 hover-text"
+            className="flex flex-col overflow-hidden shadow-lg bg-gray-300 dark:bg-gray-800 w-full sm:w-5/12 lg:w-1/4 items-center p-6 hover-text"
             variants={containerVariants}
             whileDrag={{ scale: 1.05 }}
             whileHover={{
@@ -371,25 +391,25 @@ function ImageSliders({
               boxShadow: '0 10px 20px rgba(0, 0, 0, 0.15)',
               rotate: 10,
               scale: 1.05,
-              backgroundColor: 'papayawhip',
             }}
             whileTap={{
               scaleX: -1,
               rotate: 10,
               y: -10,
               boxShadow: '0 10px 20px rgba(0, 0, 0, 0.15)',
-              backgroundColor: 'palevioletred',
             }}
             animate="visible"
             style={{ cursor: 'pointer' }}
             initial="hidden"
           >
-            <div className="font-semibold text-center">{item4.title}</div>
-            <div className="font-semibold mb-2 text-center text-gray-500">
-              {item4.title2}
+            <div className="font-semibold mb-2 text-center text-black dark:text-white">
+              {item4.title}
             </div>
             {item4.description.map((desc, i) => (
-              <h2 key={i} className="h-text text-center">
+              <h2
+                key={i}
+                className="h-text text-center text-black dark:text-white"
+              >
                 {desc}
               </h2>
             ))}
